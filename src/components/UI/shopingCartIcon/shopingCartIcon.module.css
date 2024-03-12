@@ -1,0 +1,20 @@
+.cart {
+  position: relative;
+}
+.icon {
+  cursor: pointer;
+  margin-left: auto;
+}
+.badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -40%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: red;
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+}

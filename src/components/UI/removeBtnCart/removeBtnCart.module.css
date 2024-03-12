@@ -1,0 +1,33 @@
+.btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background: #edf2f7;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  background: #fed7d7;
+}
+.btn::before,
+.btn:after {
+  position: absolute;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  content: '';
+  display: block;
+  width: 70%;
+  height: 2px;
+  background: red;
+  opacity: inherit;
+}
+.btn::before {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.btn:after {
+  bottom: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}

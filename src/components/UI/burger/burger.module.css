@@ -1,0 +1,41 @@
+.burger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.span,
+.burger:before,
+.burger:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.span {
+  opacity: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger:before {
+  top: 0;
+}
+.burger:after {
+  bottom: 0;
+}
+
+.burger.active .span {
+  opacity: 0;
+}
+.burger.active::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.burger.active::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
